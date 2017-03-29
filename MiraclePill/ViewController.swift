@@ -10,14 +10,34 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    @IBOutlet weak var statePicker: UIPickerView!
-    @IBOutlet weak var statePickerBtn: UIButton!
+    @IBOutlet weak var pillsLogo: UIImageView!
+    @IBOutlet weak var pillsTitle: UILabel!
+    @IBOutlet weak var pillsPrice: UILabel!
+    
+    @IBOutlet weak var appDivider: UIView!
+    
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var fullNameField: UITextField!
+    
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var streetField: UITextField!
+    
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityField: UITextField!
     
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryField: UITextField!
     
     @IBOutlet weak var zipLabel: UILabel!
     @IBOutlet weak var zipField: UITextField!
+    
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var statePicker: UIPickerView!
+    @IBOutlet weak var statePickerBtn: UIButton!
+    
+    @IBOutlet weak var successImage: UIImageView!
+    
+    @IBOutlet weak var buyNowBtn: UIButton!
     
     let states = ["Manila", "Cebu", "Davao"]
     
@@ -60,5 +80,37 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipLabel.isHidden = false
         zipField.isHidden = false
     }
+    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        pillsLogo.isHidden = true
+        pillsTitle.isHidden = true
+        pillsPrice.isHidden = true
+        
+        appDivider.isHidden = true
+        
+        fullNameLabel.isHidden = true
+        fullNameField.isHidden = true
+        
+        streetLabel.isHidden = true
+        streetField.isHidden = true
+        
+        cityLabel.isHidden = true
+        cityField.isHidden = true
+        
+        countryLabel.isHidden = true
+        countryField.isHidden = true
+        
+        zipLabel.isHidden = true
+        zipField.isHidden = true
+        
+        stateLabel.isHidden = true
+        statePickerBtn.isHidden = true
+        statePicker.isHidden = true
+        
+        buyNowBtn.isHidden = true
+        
+        successImage.isHidden = false
+    }
+    
 }
 
